@@ -1,0 +1,19 @@
+.primary-link {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--accentColor2);
+  outline: transparent;
+
+  svg {
+    vertical-align: middle;
+    transform: translateX(0rem);
+    transition: transform .2s ease;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    svg {
+      transform: translateX(-.2rem);
+    }
+  }
+}

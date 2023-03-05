@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --initialFontSize: 10px;
+  --bgPrimaryColor: #fefefe;
+  --bgPrimaryOppositeColor: #2c2e31;
+  --bgSecondaryColor: #ececee;
+  --fontPrimaryColor: #2c2e31;
+  --fontPrimaryOppositeColor: #fefefe;
+  --fontAccentColor: #1e3a8a;
+  --accentColor1: #60a5fa;
+  --accentColor2: #2563eb;
+  --boxShadow: 0 0.08rem 0.2rem rgba(0,0,0,.032), 0 0.27rem 0.67rem rgba(0,0,0,.048),0px 1.2rem 3rem rgba(0,0,0,.08);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+textarea {
+  font: inherit;
+}
+html {
+  font-size: var(--initialFontSize);
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: var(--bgPrimaryColor);
+}

@@ -1,0 +1,28 @@
+.form-input {
+  max-width: 35rem;
+  width: 100%;
+}
+.form-input__placeholder {
+  font-size: 1.4rem;
+  padding-left: 0.5em;
+}
+.form-input__input {
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+  padding: .8rem 1.2rem;
+  border-radius: .4rem;
+  background: linear-gradient(to right,
+    var(--accentColor2),
+    var(--accentColor1)
+    ), var(--bgSecondaryColor);
+  background-size: 100% 0;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size .2s ease;
+  width: 100%;
+  
+  &:focus {
+    background-size: 100% 10%;
+  }
+}

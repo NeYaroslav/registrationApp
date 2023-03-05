@@ -1,0 +1,49 @@
+.primary-button {
+  position: relative;
+  z-index: 1;
+  color: var(--fontPrimaryOppositeColor);
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: .8rem 1.2rem;
+  border-radius: .4rem;
+  outline: transparent;
+  border: 0;
+  background: transparent;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: .4rem;
+    z-index: -1;
+    background: linear-gradient(to right,
+      var(--accentColor2),
+      var(--accentColor1) 33%,
+      var(--accentColor1) 66%,
+      var(--accentColor2)
+    );
+    background-size: 300%;
+    background-position: left;
+    transition: background-position .2s ease, transform .2s ease;
+  }
+
+  &:not(:disabled) {
+    cursor: pointer;
+
+    &:hover::after,
+    &:focus::after {
+      background-position: right;
+    }
+    &:active::after, 
+    &:focus-visible::after {
+      transform: scale(.9);
+    }
+  }
+
+  &:disabled::after {
+    background-position: center;
+  }
+}
